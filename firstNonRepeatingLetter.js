@@ -1,5 +1,7 @@
 const firstNonRepeatingLetter = word => {
-  return word;
+  if (word.length === 1) {
+    return word;
+  }
 };
 
 module.exports = firstNonRepeatingLetter;
