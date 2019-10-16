@@ -11,6 +11,11 @@ describe("firstNonRepeatingLetter", () => {
 
   it("Returns the first non-repeating letter when there are more than one non-repeating letters", () => {
     expect(firstNonRepeatingLetter("aadee")).toEqual("d");
+    expect(firstNonRepeatingLetter("moonmen")).toEqual("e");
+  });
+
+  it("returns the first non-repeating letter when there is more than one of these", () => {
+    expect(firstNonRepeatingLetter("stress")).toEqual("t");
   });
 
   xit("Returns an empty string if all the letters are repeated", () => {

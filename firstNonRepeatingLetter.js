@@ -3,9 +3,10 @@ const firstNonRepeatingLetter = word => {
     return word;
   } else {
     let letterToReturn = "";
-    word.split("").forEach(letter => {
+    word.split("").some(letter => {
       if (word.indexOf(letter) === word.lastIndexOf(letter)) {
         letterToReturn = letter;
+        return true;
       }
     });
     return letterToReturn;
