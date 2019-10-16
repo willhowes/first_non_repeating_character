@@ -18,7 +18,11 @@ describe("firstNonRepeatingLetter", () => {
     expect(firstNonRepeatingLetter("stress")).toEqual("t");
   });
 
-  xit("Returns an empty string if all the letters are repeated", () => {
+  it("Returns an empty string if all the letters are repeated", () => {
     expect(firstNonRepeatingLetter("abba")).toEqual("");
+  });
+
+  it("Handles upper case and lower case letters in the same way", () => {
+    expect(firstNonRepeatingLetter("sTreSS")).toEqual("T");
   });
 });

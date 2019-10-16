@@ -3,9 +3,13 @@ const firstNonRepeatingLetter = word => {
     return word;
   } else {
     let letterToReturn = "";
-    word.split("").some(letter => {
-      if (word.indexOf(letter) === word.lastIndexOf(letter)) {
-        letterToReturn = letter;
+    wordFormatterAsArray = word.toLowerCase().split("");
+    wordFormatterAsArray.some((letter, index) => {
+      if (
+        wordFormatterAsArray.indexOf(letter) ===
+        wordFormatterAsArray.lastIndexOf(letter)
+      ) {
+        letterToReturn = word[index];
         return true;
       }
     });
