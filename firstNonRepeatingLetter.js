@@ -1,8 +1,6 @@
 const firstNonRepeatingLetter = word => {
   if (word.length === 1) {
     return word;
-  } else if (word === "aab") {
-    return "b";
   } else {
     let letterToReturn = "";
     word.split("").forEach(letter => {
